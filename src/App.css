@@ -1,0 +1,130 @@
+#root, html, body {
+	margin: 0;
+	padding: 0;
+	height: 100vh;
+	box-sizing: border-box;
+}
+	
+.app {
+	height: 100%;
+	/* background-image: linear-gradient( 109.6deg,  rgba(209,0,116,1) 11.2%, rgba(110,44,107,1) 91.1% ); */
+	background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(14,174,87,1) 0%, rgba(12,116,117,1) 90% );
+  background-size: cover;
+	background-position: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+	
+.card {
+	background: rgb(195, 235, 247);
+	width: 40%;
+	height: 30%;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	border-radius: 25px;
+	padding: 2%;
+	box-shadow: 10px 10px;
+}
+	
+.heading {
+	display: flex;
+	align-items: center;
+	height: 350px;
+	font-family:'Times New Roman', Times, serif;
+}
+	
+.button {
+	position: relative;
+	outline: none;
+	text-decoration: none;
+	border-radius: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+	text-transform: uppercase;
+	height: 200px;
+	width: 210px;
+	opacity: 1;
+	background-color: #22e493;
+	border: 1px solid rgba(6, 107, 107, 0.6);
+}
+.copy
+{
+  position: relative;
+  display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+  left:42%;
+  color:rgba(1, 56, 30, 0.6);
+}
+
+.button span {
+	color:#012513;
+	font-size: 12px;
+	font-weight: 500;
+	letter-spacing: 0.7px;
+}
+	
+.button:hover {
+	animation: rotate 0.7s ease-in-out both;
+}
+	
+.button:hover span {
+	animation: storm 0.7s ease-in-out both;
+	animation-delay: 0.06s;
+}
+	
+@keyframes rotate {
+	0% {
+	transform: rotate(0deg) translate3d(0, 0, 0);
+	}
+	25% {
+	transform: rotate(3deg) translate3d(0, 0, 0);
+	}
+	50% {
+	transform: rotate(-3deg) translate3d(0, 0, 0);
+	}
+	75% {
+	transform: rotate(1deg) translate3d(0, 0, 0);
+	}
+	100% {
+	transform: rotate(0deg) translate3d(0, 0, 0);
+	}
+}
+	
+@keyframes storm {
+	0% {
+	transform: translate3d(0, 0, 0) translateZ(0);
+	}
+	25% {
+	transform: translate3d(4px, 0, 0) translateZ(0);
+	}
+	50% {
+	transform: translate3d(-3px, 0, 0) translateZ(0);
+	}
+	75% {
+	transform: translate3d(2px, 0, 0) translateZ(0);
+	}
+	100% {
+	transform: translate3d(0, 0, 0) translateZ(0);
+	}
+}
+
+@media only screen and (max-width: 1007px) {
+	.card {
+		width: 60%;
+		height: 30%;
+	}
+}
+	
+@media only screen and (max-width: 600px) {
+	.card {
+		width: 80%;
+		height: 40%;
+	}
+}
